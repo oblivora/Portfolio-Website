@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Aman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+<main> 
+<header>   
+<!--Home Section-->
+<!--My Image will be displayed in middle below navigation bar-->
+    <section id="myImage">
+    <div class="img-frame">
+        <img src="image\MyIMG.jpeg">
+    </div>
+</section>
+</header>   
+<!--Profile Section-->
+<section id="profile">
+    <h1 class="name">Kumar Aman</h1>
+    <p class="para">
+        <span class="status-badge">Free for Work</span><br>
+        Quick learner with a passion for doing great things.
+    </p>
+</section>
+
+
+
+
+    
+
+<body>
+<section id="projects">
+    <h2 class="sub-headings">Projects</h2>
+    
+    <div class="project-grid">
+        <div class="project">
+            <h3>My Portfolio Website</h3>
+            <p>This Website itself is my First Project.</p>
+        </div>
+    <!--    
+        <div class="project">
+            <h3>Project Two</h3>
+            <p>Description of your second awesome project.</p>
+        </div>
+        <div class="project">
+            <h3>Project Three</h3>
+            <p>Description of your third awesome project.</p>
+        </div>
+        <div class="project">
+            <h3>Project Four</h3>
+            <p>Description of your fourth awesome project.</p>
+        </div>
+    -->
+    </div>
+</section>
+   
+</main>
+
+<hr id="divider">
+
+<section id="contact">
+    <div class="contact-wrapper">
+        
+        <div class="container quote-box">
+            <p>
+                <q>A person who never made a mistake never tried anything new.</q>
+                <footer>— <cite>Albert Einstein</cite></footer>
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="contact-margin">
+                <h2 class="mid">Contact Me</h2>
+                <p class="mid">Feel free to Contact, or leave a message:</p>
+            </div>
+            
+            <div class="column">
+                <form action="https://formspree.io/f/maqndpyj" method="post">
+                    <label for="fname">Full Name</label>
+                    <input type="text" id="fname" name="fullname" placeholder="Your name..">
+                    
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                         <option value="">Select Country</option>
+                    </select>
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="Email" placeholder="eg., shiva@gmail.com">
+
+                    <label for="subject">Your Message</label>
+                    <textarea id="subject" name="subject" placeholder="Your Message.."></textarea>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="social-links">
+        <p>Follow me on:</p>
+        <div class="icons">
+            <a href="https://github.com/oblivora" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/aman0arc" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+</body>
+
+<script>
+
+   
+ 
+  const countries = [
+    "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+  ];
+
+  const select = document.getElementById('country');
+
+  countries.forEach(country => {
+    const opt = document.createElement('option');
+    opt.value = country.toLowerCase();
+    opt.innerHTML = country;
+    select.appendChild(opt);
+  });
+</script>
+</html>

@@ -1,0 +1,323 @@
+#profile {
+    text-align: center;
+    padding: 20px 20px 40px 20px; /* Space between image and the rest of the content */
+    background-color: #0B0E14;
+}
+
+.name {
+    font-size: 3rem;           /* Large, bold name */
+    font-weight: 800;
+    font-family: "AmstelvarAlpha";
+    font-style: normal;
+    margin-bottom: 10px;
+    letter-spacing: -1px;      /* Tight, modern feel */
+    
+    /* Gradient Text Effect */
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Subtle glow so it pops against the dark background */
+    filter: drop-shadow(0 0 10px rgba(81, 2, 116, 0.3));
+}
+
+.para {
+    font-size: 1.2rem;
+    color: #8b949e;           /* Muted grey for the description */
+    max-width: 600px;         /* Prevents text from stretching too wide */
+    margin: 0 auto;           /* Centers the paragraph block */
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Designing the "Free for Work" part specifically */
+.para::first-line {
+    color: #11b367;           /* Green highlight to show availability */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(17, 179, 103, 0.1); /* Subtle green background */
+    border: 1px solid #11b367;
+    color: #11b367;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite; /* Makes the dot pulse */
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+
+#myImage {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    padding: 50px 0;
+    background-color: #0B0E14;
+}
+
+.img-frame {
+    position: relative;
+    width: 270px;           /* Adjust width to your preference */
+    height: 300px;          /* Height different from width makes it an ellipse */
+    border-radius: 50%;     /* Creates the oval shape */
+    padding: 5px;           /* This creates the thickness of the border */
+    
+    /* The Gradient Border */
+    background: linear-gradient(45deg, #7202a2, #ff007d);
+    
+    /* The Glow Effect */
+    box-shadow: 0 0 20px rgba(114, 2, 162, 0.6);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;       /* Ensures the image doesn't pop out of the ellipse */
+}
+
+.img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Crops the image to fit the ellipse perfectly */
+    border-radius: 50%;     /* Matches the frame shape */
+    background-color: #0B0E14; /* Prevents gaps showing if image is small */
+}
+
+/* Optional: Hover effect */
+.img-frame:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 30px rgba(255, 0, 125, 0.8);
+}
+
+
+/* Apply to the whole page */
+
+body {
+    background-color: #0B0E14;
+    color: white;
+}
+
+main {
+    background-color: #0B0E14;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#projects {
+    text-align: center;      /* Centers the text (heading) */
+    padding: 60px 20px;
+    display: flex;
+    
+    flex-direction: column;  /* Keeps the heading on top and project below */
+    align-items: center;     /* Centers the children horizontally */
+}
+
+.project-grid {
+    display: grid;
+    /* This line creates as many 300px columns as fit, then centers them */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;            /* Space between the cards */
+    width: 90%;
+    max-width: 1200px;    /* Keeps the grid from getting too wide on huge monitors */
+    margin: 0 auto;       /* Centers the entire grid on the page */
+    padding: 20px 0;
+}
+
+.project {
+    background-color: #161B22; /* Matches your contact container */
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;         /* Prevents it from being too wide on desktop */
+    width: 90%;     
+    display: flex;
+    flex-direction: column;        /* Good for mobile responsiveness */
+    border: 1px solid #30363d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Adds a subtle purple glow like your other elements */
+    box-shadow: 0 4px 20px rgba(114, 2, 162, 0.2);
+}
+
+/* Hover effect to make it interactive */
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(114, 2, 162, 0.4);
+    border-color: #7202a2;
+}
+
+.project h3 {
+    color: #ff007d; /* Pink accent color */
+    margin-top: 0;
+}
+
+.project p {
+    color: #8b949e; /* Muted grey for description */
+    margin-bottom: 0;
+}
+#divider {
+    
+    border: none;
+    height: 1px;
+    background-color: #161B22; /* Matches your container background */
+    border-top: 1px solid #7202a2;
+    border-bottom: 1px solid #ff007d;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(114, 2, 162, 0.4);
+}
+
+
+
+
+/* The parent wrapper using Flexbox */
+.contact-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the items */
+    align-items: flex-start; /* Aligns them at the top */
+    gap: calc(10vh - 10px);               /* Space between quote and form */
+    padding: 50px 20px;
+    flex-wrap: wrap;         /* Allows them to stack on small screens */
+}
+
+/* Ensure both containers take up equal space or set specific widths */
+.contact-wrapper .container {
+    flex: 1;                 /* Grow to fill space */
+    max-width: 500px;        /* Prevents them from getting too wide */
+    margin: 0;               /* Remove 'auto' to keep them aligned */
+}
+
+/* Specific styling for the quote box to center the text vertically */
+.quote-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;       /* Gives it some height similar to the form */
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Responsive: On mobile, make them stack vertically */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-wrapper .container {
+        width: 100%;
+    }
+}
+.contact-margin {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.mid {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* High Contrast Inputs */
+input[type=text], input[type=email] {
+    background-color: #0B0E14; /* Darker than the container */
+    color: white;
+    border: 1px solid #30363d;
+    padding: 12px;
+    
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 4px;
+}
+
+#country, #subject {
+    background-color: #0B0E14; /* Darker than the container */
+    color: white;
+    border: 1px solid #30363d;
+    padding: 12px;
+    
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 4px;
+}
+
+/* Target the textarea and the select dropdown when they are clicked (focused) */
+textarea:focus, 
+select:focus, 
+input[type=text]:focus, 
+input[type=email]:focus {
+    outline: none; /* This removes the default browser blue border */
+    border-color: #7202a2; /* Changes the border color to your purple */
+    box-shadow: 0 0 10px rgba(114, 2, 162, 0.6); /* This creates the "glow" effect */
+    transition: all 0.3s ease; /* Makes the glow fade in smoothly */
+}
+
+
+
+
+/* Vibrant Submit Button */
+input[type=submit] {
+    background: linear-gradient(45deg, #7202a2, #A333FF);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.02); /* Subtle pop effect */
+    filter: brightness(1.2);
+}
+.social-links {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #30363d; /* Adds a subtle divider line */
+    padding-top: 20px;
+}
+
+.social-links p {
+    color: #8b949e;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.icons a {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover effect: Icons turn purple and glow */
+.icons a:hover {
+    color: #7202a2;
+    text-shadow: 0 0 10px rgba(114, 2, 162, 0.8);
+    transform: translateY(-3px); /* Lifts the icon slightly */
+    display: inline-block;
+}
+.fa-x-twitter:hover {
+    color: #ffffff; /* X looks best in pure white or your accent purple */
+    filter: drop-shadow(0 0 5px #7202a2);
+}
+
